@@ -31,22 +31,22 @@ custom_theme = f"""
 
 st.markdown(custom_theme, unsafe_allow_html=True)
 
-#build homepage
+# Build homepage
 if page == "🧹 About Us":
-    st.title("💼 CoveClean Innovations")
-    # Audio File 9 to 5
-    st.write("🎶: 9 to 5 by Dolly Parton and Kelly Clarkson")
-    audio_file_path = "audio/9to5dollypar.mp3" 
-    st.audio(audio_file_path, format='audio/mp3', start_time=0)
-    st.subheader("Welcome To CoveClean Innovations! Transforming Spaces One Cove At A Time.")
-    st.write("Please use the toggle bar on the left hand side of the page to navigate between our services, our pricing, reviews, and contact information.")
+    st.title("🧹 About Us:")
+    st.subheader("CoveClean Innovations:")
     
-    # Centered image
-    st.image("***insert coveclean innovations logo**** file address****", 
-         caption="CoveClean Innovations Logo",
-         use_column_width=True,
-         output_format="auto",
-         width=0.5) 
+    st.write("Transforming spaces one cove at a time!")
+    st.write("Please use the toggle bar on the left hand side of the page to navigate between our services, pricing, reviews, and contact information.")
+    
+    # Define the file path to your logo image
+    logo_path = "coveclean_innovations_logo.png"
+
+    # Display the image
+    st.image(logo_path, 
+            use_column_width=True,
+            output_format="auto",
+            width=0.5) 
 
 #build services page
 if page == "🧽 Services":
