@@ -37,7 +37,7 @@ if page == "🧹 About Us":
             output_format="auto",
             width=0.5) 
     
-    st.write("Please use the toggle bar on the left hand side of the page to navigate between our services, pricing, reviews, and contact information.")
+    st.write("Please use the toggle bar on the left hand side of the page to navigate between our services, pricing, differentiators, and contact information.")
 
 #build home cleaning services & pricing page
 if page == "🧽 Home Cleaning Pricing":
@@ -126,3 +126,7 @@ if page == "🧺 What Makes Us Different?":
 if page == "🧻 Contact Us":
     st.title("🧻 Contact Us")
     st.write("Contact Us!")
+    st.write("Feel free to reach out to us via the following methods:")
+    st.markdown("- Phone Number: :telephone_receiver: 518-860-5133")
+    st.markdown("- Email: :email: amandajo514@gmail.com")
+    st.markdown("- Booking Calendly Link: [Book a cleaning service](https://calendly.com/covecleaninnovations/cleaningservices?month=2024-03)")
