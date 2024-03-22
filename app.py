@@ -27,6 +27,7 @@ if page == "🧹 About Us":
     st.subheader("CoveClean Innovations:")
     
     st.write("Transforming spaces one cove at a time!")
+    st.markdown("- Booking Calendly Link: [Book a cleaning service](https://calendly.com/covecleaninnovations/cleaningservices?month=2024-03)"
     
     # Define the file path to your logo image
     logo_path = "coveclean_innovations_logo.png"
