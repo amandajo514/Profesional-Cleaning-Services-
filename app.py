@@ -27,7 +27,7 @@ if page == "🧹 About Us":
     st.subheader("CoveClean Innovations:")
     
     st.write("Transforming spaces one cove at a time!")
-    st.markdown("- Booking Calendly Link: [Book a cleaning service](https://calendly.com/covecleaninnovations/cleaningservices?month=2024-03)"
+    st.markdown("- Book Your Day / Time Here: [Book a cleaning service](https://calendly.com/covecleaninnovations/cleaningservices?month=2024-03)")
     
     # Define the file path to your logo image
     logo_path = "coveclean_innovations_logo.png"
@@ -125,9 +125,10 @@ if page == "🧺 What Makes Us Different?":
    
 # Build contact us page
 if page == "🧻 Contact Us":
-    st.title("🧻 Contact Us")
-    st.write("Contact Us!")
-    st.write("Feel free to reach out to us via the following methods:")
-    st.markdown("- Phone Number: :telephone_receiver: 518-860-5133")
-    st.markdown("- Email: :email: amandajo514@gmail.com")
-    st.markdown("- Booking Calendly Link: [Book a cleaning service](https://calendly.com/covecleaninnovations/cleaningservices?month=2024-03)")
+        st.title("🧻 Contact Us")
+        st.write("Contact Us!")
+        st.write("Feel free to reach out to us via the following methods:")
+        st.markdown("- Phone Number: :telephone_receiver: 518-860-5133")
+        st.markdown("- Email: :email: amandajo514@gmail.com")
+        st.markdown("- Book Your Day / Time Here: [Book a cleaning service](https://calendly.com/covecleaninnovations/cleaningservices?month=2024-03)")
+        st.image("path_to_your_image.png", use_column_width=True)  
