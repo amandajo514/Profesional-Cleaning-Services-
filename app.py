@@ -6,7 +6,7 @@ from streamlit_folium import folium_static
 st.set_page_config(page_title="CoveClean Innovations", page_icon="🧹")
 
 # Sidebar navigation
-page = st.sidebar.selectbox("Select a Page", ["🧹 About Us", "🧽 Home Cleaning Pricing", "🧼 Corporate Office Cleaning Pricing", "🧺 What Makes Us Different?", "🧻 Contact Us"])
+page = st.sidebar.selectbox("Select a Page", ["🧹 About Us", "🧽 Home Cleaning Pricing", "🧼 Corporate Office Cleaning Pricing", "🧺 What Makes Us Different?", "🚰 FAQs", "🧻 Contact Us"])
 
 # setting color theme
 custom_theme = f"""
@@ -33,15 +33,15 @@ def show_service_areas():
     # Add marker for Albany, NY
     folium.Marker(location=[42.6526, -73.7562], popup="Albany, NY", icon=folium.Icon(color="blue", icon="home")).add_to(m)
 
-    # Add circle around Albany with a 1-hour driving radius
+    # Add circle around Albany with a 1.5-hour driving radius
     folium.Circle(
-    location=[42.6526, -73.7562],
-    radius=60350,  # 1.5 hours in meters (approximately 60,350 meters)
-    color='green',
-    fill=True,
-    fill_color='green',
-    fill_opacity=0.2
-).add_to(m)
+        location=[42.6526, -73.7562],
+        radius=90465,  # 1.5 hours in meters (approximately 90,465 meters)
+        color='green',
+        fill=True,
+        fill_color='green',
+        fill_opacity=0.2
+    ).add_to(m)
 
     # Display the map in Streamlit
     folium_static(m)
@@ -191,7 +191,35 @@ if page == "🧺 What Makes Us Different?":
     # Display bullet points
     for bullet, description in bullet_points.items():
         st.markdown(f"**{bullet}:** {description}")
-   
+
+# Build FAQ page
+        
+if page == "🚰 FAQs":
+    st.title("Contact Us")
+    st.subheader(" 🚰  CoveClean Innovations - Frequently Asked Questions")
+
+    # Add a page break
+    st.markdown("---")
+
+    # Define the FAQ questions and answers
+    faq = {
+        "Q: What cleaning services do you offer?": "A: We offer a wide range of cleaning services for both residential and commercial properties, including home cleaning, office cleaning, deep cleaning, carpet cleaning, and more.",
+        "Q: Do you supply the cleaning supplies?": "A: Yes, we provide all the necessary cleaning supplies and equipment needed to complete the job.",
+        "Q: How much do your cleaning services cost?": "A: The cost of our cleaning services depends on various factors such as the size of the space, the type of cleaning required, and any additional services requested. We offer transparent pricing with no hidden fees.",
+        "Q: Are your cleaning products environmentally friendly?": "A: Yes, we prioritize the use of eco-friendly cleaning products that are safe for you, your family, and the environment.",
+        "Q: How do I schedule a cleaning service?": "A: Scheduling a cleaning service is easy! You can book online through our website, give us a call, or send us an email to request an appointment.",
+        "Q: Do you offer discounts for regular cleaning services?": "A: Yes, we offer discounts and promotions for regular cleaning services. Please contact us for more information on our current offers.",
+        "Q: What areas do you serve?": "A: We serve the greater metropolitan area, including 1.5 hours from Albany, NY. If you're unsure whether we cover your area, feel free to reach out to us.",
+        # Add more FAQ questions and answers as needed
+    }
+
+    # Display the FAQ questions and answers
+    for question, answer in faq.items():
+        st.markdown(f"**{question}**")
+        st.write(answer)
+        st.write("---")
+
+
 # Build contact us page
 if page == "🧻 Contact Us":
         st.title("Contact Us")
@@ -209,7 +237,6 @@ if page == "🧻 Contact Us":
             output_format="auto",
             width=0.5) 
 
-        st.write("Contact Us!")
-        st.write("Feel free to reach out to us via the following methods:")
+        st.write("Contact Us! You can reach out via the following methods:")
         st.markdown("- Phone Number: :telephone_receiver: 518-860-5133")
         st.markdown("- Email: :email: covecleaninnovations@gmail.com")
