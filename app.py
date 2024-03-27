@@ -23,8 +23,8 @@ st.markdown(custom_theme, unsafe_allow_html=True)
 
 # Build homepage
 if page == "🧹 About Us":
-    st.title("🧹 About Us:")
-    st.subheader("CoveClean Innovations:")
+    st.title("About Us:")
+    st.subheader(" 🧹  CoveClean Innovations ")
     
     st.write("Transforming spaces one cove at a time! Book Your Day / Time Here: [Book a cleaning service](https://calendly.com/covecleaninnovations/cleaningservices?month=2024-03)")
 
@@ -39,13 +39,12 @@ if page == "🧹 About Us":
             output_format="auto",
             width=0.5) 
     
-    st.write("Please use the toggle bar on the left hand side of the page to navigate between our services, pricing, differentiators, and contact information.")
+    st.write(" ⬅️ Please use the toggle bar on the left hand side of the page to navigate between our services, pricing, differentiators, and contact information.")
 
 #build home cleaning services & pricing page
 if page == "🧽 Home Cleaning Pricing":
     st.title("Professional Home Cleaning")
-    st.title("🧽 Services & Pricing")
-    st.subheader("CoveClean Innovations:")
+    st.subheader(" 🧽 CoveClean Innovations - Services & Pricing")
     
     st.write("Transforming spaces one cove at a time! Book Your Day / Time Here: [Book a cleaning service](https://calendly.com/covecleaninnovations/cleaningservices?month=2024-03)")
     
@@ -60,6 +59,8 @@ if page == "🧽 Home Cleaning Pricing":
 
     st.markdown('<div class="center">', unsafe_allow_html=True)
     
+    st.write("PRICING STRUCTURE FOR PROFESSIONAL HOME CLEANING SERVICES:")
+
     # Basic Service Column
     st.markdown('<div class="service-column">', unsafe_allow_html=True)
     st.write("**Basic**")
@@ -88,8 +89,7 @@ if page == "🧽 Home Cleaning Pricing":
     
 if page == "🧼 Corporate Office Cleaning Pricing":
     st.title("Corporate Office Cleaning")
-    st.title("🧼 Services & Pricing")
-    st.subheader("CoveClean Innovations:")
+    st.subheader(" 🧼 CoveClean Innovations - Services & Pricing")
     
     st.write("Transforming spaces one cove at a time! Book Your Day / Time Here: [Book a cleaning service](https://calendly.com/covecleaninnovations/cleaningservices?month=2024-03)")
     
@@ -103,6 +103,8 @@ if page == "🧼 Corporate Office Cleaning Pricing":
             width=0.5) 
 
     st.markdown('<div class="center">', unsafe_allow_html=True)
+
+    st.write("PRICING STRUCTURE FOR PROFESSIONAL CORPORATE OFFICE CLEANING SERVICES:")
     
     # Basic Service Column
     st.markdown('<div class="service-column">', unsafe_allow_html=True)
@@ -131,8 +133,7 @@ if page == "🧼 Corporate Office Cleaning Pricing":
     
 # Build what makes us different page
 if page == "🧺 What Makes Us Different?":
-    st.title("🧺 What Makes Us Different")
-    st.subheader("CoveClean Innovations:")
+    st.subheader(" 🧺  CoveClean Innovations - What Makes Us Different?")
     
     st.write("Transforming spaces one cove at a time! Book Your Day / Time Here: [Book a cleaning service](https://calendly.com/covecleaninnovations/cleaningservices?month=2024-03)")
     
@@ -144,6 +145,8 @@ if page == "🧺 What Makes Us Different?":
             use_column_width=True,
             output_format="auto",
             width=0.5) 
+    
+    st.write("OUR DIFFERENTIATORS:")
     
     # Define bullet points
     bullet_points = {
@@ -162,9 +165,9 @@ if page == "🧺 What Makes Us Different?":
    
 # Build contact us page
 if page == "🧻 Contact Us":
-        st.title("🧻 Contact Us")
+        st.title("Contact Us")
 
-        st.subheader("CoveClean Innovations:")
+        st.subheader(" 🧻  CoveClean Innovations - Contact Information Below")
         
         st.write("Transforming spaces one cove at a time! Book Your Day / Time Here: [Book a cleaning service](https://calendly.com/covecleaninnovations/cleaningservices?month=2024-03)")
     
