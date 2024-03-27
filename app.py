@@ -26,8 +26,9 @@ if page == "🧹 About Us":
     st.title("🧹 About Us:")
     st.subheader("CoveClean Innovations:")
     
-    st.write("Transforming spaces one cove at a time!")
-    st.markdown("- Book Your Day / Time Here: [Book a cleaning service](https://calendly.com/covecleaninnovations/cleaningservices?month=2024-03)")
+    st.write("Transforming spaces one cove at a time! Book Your Day / Time Here: [Book a cleaning service](https://calendly.com/covecleaninnovations/cleaningservices?month=2024-03)")
+
+    st.write("Welcome to CoveClean Innovations, your premier destination for top-quality cleaning services tailored to transform your spaces. At CoveClean, we're committed to delivering exceptional cleanliness and unmatched convenience, one cove at a time. Our professional team is dedicated to meticulous attention to detail, ensuring every corner of your home or office sparkles with cleanliness. With our user-friendly online booking platform and customizable service options, scheduling your cleaning services has never been easier. Experience the difference with CoveClean Innovations – where cleanliness meets convenience, and excellence is our standard.")
     
     # Define the file path to your logo image
     logo_path = "coveclean_innovations_logo.png"
@@ -44,6 +45,18 @@ if page == "🧹 About Us":
 if page == "🧽 Home Cleaning Pricing":
     st.title("Professional Home Cleaning")
     st.title("🧽 Services & Pricing")
+    st.subheader("CoveClean Innovations:")
+    
+    st.write("Transforming spaces one cove at a time! Book Your Day / Time Here: [Book a cleaning service](https://calendly.com/covecleaninnovations/cleaningservices?month=2024-03)")
+    
+    # Define the file path to your logo image
+    logo_path = "coveclean_innovations_logo.png"
+
+    # Display the image
+    st.image(logo_path, 
+            use_column_width=True,
+            output_format="auto",
+            width=0.5) 
 
     st.markdown('<div class="center">', unsafe_allow_html=True)
     
@@ -76,6 +89,18 @@ if page == "🧽 Home Cleaning Pricing":
 if page == "🧼 Corporate Office Cleaning Pricing":
     st.title("Corporate Office Cleaning")
     st.title("🧼 Services & Pricing")
+    st.subheader("CoveClean Innovations:")
+    
+    st.write("Transforming spaces one cove at a time! Book Your Day / Time Here: [Book a cleaning service](https://calendly.com/covecleaninnovations/cleaningservices?month=2024-03)")
+    
+    # Define the file path to your logo image
+    logo_path = "coveclean_innovations_logo.png"
+
+    # Display the image
+    st.image(logo_path, 
+            use_column_width=True,
+            output_format="auto",
+            width=0.5) 
 
     st.markdown('<div class="center">', unsafe_allow_html=True)
     
@@ -107,6 +132,18 @@ if page == "🧼 Corporate Office Cleaning Pricing":
 # Build what makes us different page
 if page == "🧺 What Makes Us Different?":
     st.title("🧺 What Makes Us Different")
+    st.subheader("CoveClean Innovations:")
+    
+    st.write("Transforming spaces one cove at a time! Book Your Day / Time Here: [Book a cleaning service](https://calendly.com/covecleaninnovations/cleaningservices?month=2024-03)")
+    
+    # Define the file path to your logo image
+    logo_path = "coveclean_innovations_logo.png"
+
+    # Display the image
+    st.image(logo_path, 
+            use_column_width=True,
+            output_format="auto",
+            width=0.5) 
     
     # Define bullet points
     bullet_points = {
@@ -126,9 +163,21 @@ if page == "🧺 What Makes Us Different?":
 # Build contact us page
 if page == "🧻 Contact Us":
         st.title("🧻 Contact Us")
+
+        st.subheader("CoveClean Innovations:")
+        
+        st.write("Transforming spaces one cove at a time! Book Your Day / Time Here: [Book a cleaning service](https://calendly.com/covecleaninnovations/cleaningservices?month=2024-03)")
+    
+    # Define the file path to your logo image
+        logo_path = "coveclean_innovations_logo.png"
+
+    # Display the image
+        st.image(logo_path, 
+            use_column_width=True,
+            output_format="auto",
+            width=0.5) 
+
         st.write("Contact Us!")
         st.write("Feel free to reach out to us via the following methods:")
         st.markdown("- Phone Number: :telephone_receiver: 518-860-5133")
         st.markdown("- Email: :email: amandajo514@gmail.com")
-        st.markdown("- Book Your Day / Time Here: [Book a cleaning service](https://calendly.com/covecleaninnovations/cleaningservices?month=2024-03)")
-        st.image("path_to_your_image.png", use_column_width=True)  
