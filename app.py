@@ -1,9 +1,11 @@
 import streamlit as st
+import folium
+from streamlit_folium import folium_static
 
 # Set page title and icon
-st.set_page_config(page_title = "CoveClean Innovations", page_icon = "🧹")
+st.set_page_config(page_title="CoveClean Innovations", page_icon="🧹")
 
-#Sidebar navigation
+# Sidebar navigation
 page = st.sidebar.selectbox("Select a Page", ["🧹 About Us", "🧽 Home Cleaning Pricing", "🧼 Corporate Office Cleaning Pricing", "🧺 What Makes Us Different?", "🧻 Contact Us"])
 
 # setting color theme
@@ -21,25 +23,50 @@ custom_theme = f"""
 
 st.markdown(custom_theme, unsafe_allow_html=True)
 
+# Define function to display the interactive map
+def show_service_areas():
+    st.subheader("Service Areas Map")
+    
+    # Create a map centered at Albany, NY
+    m = folium.Map(location=[42.6526, -73.7562], zoom_start=10)
+
+    # Add marker for Albany, NY
+    folium.Marker(location=[42.6526, -73.7562], popup="Albany, NY", icon=folium.Icon(color="blue", icon="home")).add_to(m)
+
+    # Add circle around Albany with a 1-hour driving radius
+    folium.Circle(
+    location=[42.6526, -73.7562],
+    radius=60350,  # 1.5 hours in meters (approximately 60,350 meters)
+    color='green',
+    fill=True,
+    fill_color='green',
+    fill_opacity=0.2
+).add_to(m)
+
+    # Display the map in Streamlit
+    folium_static(m)
+
 # Build homepage
 if page == "🧹 About Us":
-    st.title("About Us:")
-    st.subheader(" 🧹  CoveClean Innovations ")
-    
+    st.title("About Us")
+    st.subheader("🧹 CoveClean Innovations")
+
     st.write("Transforming spaces one cove at a time! Book Your Day / Time Here: [Book a cleaning service](https://calendly.com/covecleaninnovations/cleaningservices?month=2024-03)")
 
-    st.write("Welcome to CoveClean Innovations, your premier destination for top-quality cleaning services tailored to transform your spaces. At CoveClean, we're committed to delivering exceptional cleanliness and unmatched convenience, one cove at a time. Our professional team is dedicated to meticulous attention to detail, ensuring every corner of your home or office sparkles with cleanliness. With our user-friendly online booking platform and customizable service options, scheduling your cleaning services has never been easier. Experience the difference with CoveClean Innovations – where cleanliness meets convenience, and excellence is our standard.")
-    
+    st.write("⬅️ Please use the toggle bar on the left hand side of the page to navigate between our services, pricing, differentiators, and contact information.")
+
     # Define the file path to your logo image
     logo_path = "coveclean_innovations_logo.png"
 
     # Display the image
-    st.image(logo_path, 
-            use_column_width=True,
-            output_format="auto",
-            width=0.5) 
-    
-    st.write(" ⬅️ Please use the toggle bar on the left hand side of the page to navigate between our services, pricing, differentiators, and contact information.")
+    st.image(logo_path, use_column_width=True, output_format="auto", width=0.5)
+
+    st.write("Welcome to CoveClean Innovations, your premier destination for top-quality cleaning services tailored to transform your spaces. At CoveClean, we're committed to delivering exceptional cleanliness and unmatched convenience, one cove at a time. Our professional team is dedicated to meticulous attention to detail, ensuring every corner of your home or office sparkles with cleanliness. With our user-friendly online booking platform and customizable service options, scheduling your cleaning services has never been easier. Experience the difference with CoveClean Innovations – where cleanliness meets convenience, and excellence is our standard.")
+
+    st.markdown("- Email: :email: covecleaninnovations@gmail.com")
+
+    # Display the interactive map
+    show_service_areas()
 
 #build home cleaning services & pricing page
 if page == "🧽 Home Cleaning Pricing":
@@ -133,7 +160,9 @@ if page == "🧼 Corporate Office Cleaning Pricing":
     
 # Build what makes us different page
 if page == "🧺 What Makes Us Different?":
-    st.subheader(" 🧺  CoveClean Innovations - What Makes Us Different?")
+    st.title("What Makes Us Different?")
+
+    st.subheader(" 🧺  CoveClean Innovations - Our Differentiators")
     
     st.write("Transforming spaces one cove at a time! Book Your Day / Time Here: [Book a cleaning service](https://calendly.com/covecleaninnovations/cleaningservices?month=2024-03)")
     
@@ -146,7 +175,7 @@ if page == "🧺 What Makes Us Different?":
             output_format="auto",
             width=0.5) 
     
-    st.write("OUR DIFFERENTIATORS:")
+    st.write("LEARN WHAT SETS US APART:")
     
     # Define bullet points
     bullet_points = {
@@ -183,4 +212,4 @@ if page == "🧻 Contact Us":
         st.write("Contact Us!")
         st.write("Feel free to reach out to us via the following methods:")
         st.markdown("- Phone Number: :telephone_receiver: 518-860-5133")
-        st.markdown("- Email: :email: amandajo514@gmail.com")
+        st.markdown("- Email: :email: covecleaninnovations@gmail.com")
